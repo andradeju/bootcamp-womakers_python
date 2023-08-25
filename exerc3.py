@@ -1,4 +1,4 @@
-#1-Faça um Programa que peça as quatro notas de 10 alunos, calcule e armazene numa lista a média de cada aluno,imprima 
+""" #1-Faça um Programa que peça as quatro notas de 10 alunos, calcule e armazene numa lista a média de cada aluno,imprima 
 #o número de alunos com média maior ou igual a 7.0
 medias_alunos = []
 aluno_num = 0
@@ -26,28 +26,28 @@ for media in medias_alunos:
 #frente utilizando somente letras maiúsculas. Dica: lembre-se que ao informar o nome o usuário pode digitar 
 #letras maiúsculas ou minúsculas.
 nome = input('Digite seu nome(pode ser em maiuscula ou em minuscula: ')
-print(nome.upper()[::-1])
+print(nome.upper()[::-1]) """
 
 
 
 #3-Escreva um programa em Python que onde todos os valores em um dicionário são emitidos. Se sim, imprima True. 
 #caso contrário, imprima Falso.
 #dicionario = {'Chave':'Valor'}
-def verifica_dicionario(dicionario):
-  for valor in dicionario.values():
-    if not valor:
-      return False
-  return True
+def verifica_dicionario():
+  dicionario = {'uva':'É uma fruta', 'carro' : 'É um veículo', 'cachorro' : 'É um animal', 'boneca' : ''}
+  print(dicionario)
 
-dicionario1 = {}
-dicionario1 ['uva'] = 'É uma fruta'
-dicionario1 ['carro'] = 'É um veículo'
-dicionario1 ['cachorro'] = 'É um animal'
-dicionario1 ['boneca'] = ''
-dicionario1 ['celular'] = None
+  valores_emitidos = all(valor for valor in dicionario.values())
 
-resultado = verifica_dicionario(dicionario1)
-print(resultado) 
+  if valores_emitidos:
+    print("True")
+  else:
+    print("False")
+
+verifica_dicionario()    
+
+
+
 
 
 
@@ -57,7 +57,7 @@ print(resultado)
 #participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões, ela deve ser classificada 
 #como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ela será classificada como 
 #"Inocente".
-def investigacao():
+""" def investigacao():
   respostas= []
 
   respostas.append(input('[Responda sim ou não] - Telefonou para a vítima? ').lower())
@@ -78,3 +78,4 @@ def investigacao():
     print("Inocente")    
 
 investigacao()
+ """
