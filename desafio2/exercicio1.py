@@ -2,12 +2,11 @@
 #Um carro tem os seguintes comportamentos: liga, desliga, acelera, desacelera.
 
 class Carro:
-  def _init_(self):
+  def __init__(self, cor, modelo):
+    self.cor = cor
+    self.modelo = modelo
     self.ligado = False
-    self.cor = "Preto"
-    self.modelo = "Honda Civic"
     self.velocidade = 0
-    self.velocidade_min = 10
     self.velocidade_max = 220
 
   def ligar(self):
@@ -18,23 +17,30 @@ class Carro:
     self.velocidade = 0
 
   def acelerar(self):
-    if not self.ligado:
+    if self.ligado == False:
       return   
 
     if self.velocidade < self.velocidade_max:
       self.velocidade += 10
 
   def desacelerar(self):
-    if not self.ligado:
+    if self.ligado == False:
       return
 
-    if self.velocidade > self.velocidade_min:
+    if self.velocidade > 0:
       self.velocidade -= 10
 
-carro = Carro()
+  def __str__(self):
+    ligado_str = 'ligado' if self.ligado == True else 'desligado'
+    return f'Carro {self.cor} modelo {self.modelo} à velocidade {self.velocidade}'    
+
+carro = Carro('preto', 'Honda Civic')
+print(carro)
+
 carro.ligar()
 
 print(f'O carro está ligado? {carro.ligado}')
+
 carro.acelerar()
 print(f'Qual é a velocidade atual do carro? {carro.velocidade}')
 
@@ -42,3 +48,5 @@ for _ in range(4):
   carro.acelerar()
 
 print(f'Qual é a velocidade do carro no momento? {carro.velocidade}')
+
+carro.desligar()
