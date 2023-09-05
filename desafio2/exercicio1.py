@@ -32,21 +32,21 @@ class Carro:
 
   def __str__(self):
     ligado_str = 'ligado' if self.ligado == True else 'desligado'
-    return f'Carro {self.cor} modelo {self.modelo} à velocidade {self.velocidade}'    
+    return f'Carro {self.cor}, modelo {self.modelo} à velocidade {self.velocidade} km/h'    
 
 carro = Carro('preto', 'Honda Civic')
 print(carro)
 
 carro.ligar()
-
 print(f'O carro está ligado? {carro.ligado}')
 
 carro.acelerar()
-print(f'Qual é a velocidade atual do carro? {carro.velocidade}')
+print(f'Qual é a velocidade do carro? {carro.velocidade}')
 
 for _ in range(4):
   carro.acelerar()
-
-print(f'Qual é a velocidade do carro no momento? {carro.velocidade}')
+print(carro)
+print(f'Após acelerar, qual é a velocidade do carro no momento? {carro.velocidade}')
 
 carro.desligar()
+print(carro)
