@@ -10,21 +10,21 @@ db: List[User] = [
       id=UUID("56b4ede7-e8ac-43ed-b176-bea60ebd2f43"),
       first_name="Nathalia", 
       last_name="Andrade", 
-      email="nath@andrade.com", 
+      email="nath@andrade.com.br", 
       role=[Role.role_1]
     ),
     User(
       id=UUID("6f3282e3-e0cc-41cb-bcc8-2ea16b7fe226"),
       first_name="Juliana", 
       last_name="Almeida", 
-      email="ju@almeida.com", 
+      email="ju@almeida.com.br", 
       role=[Role.role_2]
     ),
         User(
       id=UUID("3aa1a3f5-9d36-43a5-9e46-2e266aabc58c"),
       first_name="Zelita", 
       last_name="Camargo", 
-      email="zelita@camargo.com", 
+      email="zelita@camargo.com.br", 
       role=[Role.role_3]
     )
 ]
