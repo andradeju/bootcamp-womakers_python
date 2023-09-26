@@ -9,6 +9,12 @@
           <div class="card-body">
             <h2 class="h6">Tipo: {{location.type}}</h2>
             <h2 class="h6">Dimensão: {{location.dimension}}</h2>
+            <h2 class="h6">Personagens: </h2>
+              <ul>
+                {% for character in characters %}
+                  <li> <a href="/profile/{{character.id}}">{{ character.name }}</a></li>
+                {% endfor %}
+              </ul>
           </div>
         </div>
     </div>
