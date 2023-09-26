@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-md-4 col-20">
+    <div class="card mt-4 text-center">
+      <h1 class="h5">{{episode.name}}</h1>
+      <div class="card-body">
+        <p class="card-text">Lançamento: {{episode.air_date}}</p>
+        <p class="card-text">Código: {{episode.episode}}</p>
+      <h2 class="h6">Personagens: </h2> 
+      <ul>
+          {% for character in characters %}
+            <li> <a href="/profile/{{character.id}}">{{ character.name }}</a></li>
+          {% endfor %}
+          </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
