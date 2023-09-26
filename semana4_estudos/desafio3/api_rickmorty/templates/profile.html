@@ -11,6 +11,14 @@
                     <h2 class="h6">Status: {{profile.status}}</h2>
                     <h2 class="h6">Species: {{profile.species}}</h2>
                     <h2 class="h6">Gender: {{profile.gender}}</h2>
+                    <h2 class="h6">Origin: <a href="/location/{{location.id}}">{{profile.origin.name}}</a></h2>
+                    <h2 class="h6">Localização: <a href="/location/{{location.id}}">{{profile.location.name}}</a></h2>
+                    <h2 class="h6">Episódios: </h2>
+                        <ul>
+                            {% for episode in episodes %}
+                                <li><a href="/location/{{location.id}}">{{episode.name}}</a></li>
+                            {% endfor %}
+                        </ul>
                 </div>
             </div>
     </div>
