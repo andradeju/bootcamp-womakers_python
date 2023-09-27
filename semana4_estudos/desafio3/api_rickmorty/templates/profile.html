@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="row">
-    <div class="col-sm-3 col-6">
+    <div class="col-md-4 col-14 mx-auto">
             <div class="card mt-4">
                 <img src="{{profile.image}}" alt="{{profile.name}}"
                 class="img-fluid img-thumbnail" />
@@ -13,10 +13,10 @@
                     <h2 class="h6">Gender: {{profile.gender}}</h2>
                     <h2 class="h6">Origin: <a href="/location/{{location.id}}">{{profile.origin.name}}</a></h2>
                     <h2 class="h6">Localização: <a href="/location/{{location.id}}">{{profile.location.name}}</a></h2>
-                    <h2 class="h6">Episódios: </h2>
-                        <ul>
+                    <h2 class="h6 text-center mt-4">Episódios: </h2>
+                        <ul class="list-group">
                             {% for episode in episodes %}
-                                <li><a href="/location/{{location.id}}">{{episode.name}}</a></li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center"><a href="/location/{{location.id}}">{{episode.name}}</a></li>
                             {% endfor %}
                         </ul>
                 </div>
